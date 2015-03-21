@@ -127,8 +127,8 @@ class CellParser:
 			if blank:
 				yield row_set
 				row_set = []
+		row_set.append([]);
 		yield row_set
-			
 
 class ElasticTabstopsPlugin(GObject.Object, Gedit.ViewActivatable):
 
