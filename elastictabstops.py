@@ -41,7 +41,7 @@ class TabGroup:
 		self.buffer = view.get_buffer()
 
 		self.tag = self.buffer.create_tag(None, tabs = self.tabs)
-		for x in xrange(self.line_count):
+		for x in range(self.line_count):
 			start_iter	= self.buffer.get_iter_at_line(self.first_line+x)
 			end_iter	= start_iter.copy()
 			end_iter.forward_to_line_end()
@@ -141,17 +141,17 @@ class ElasticTabstopsPlugin(GObject.Object, Gedit.ViewActivatable):
 		self.outstanding_tags = []
 
 	def do_activate(self):
-		print "ETP Activate"
+		print("ETP Activate")
 
 		self.buffer = self.view.get_buffer()
 
 		self.buffer.connect("changed", self.changed_callback, self.view)
 
 	def do_deactivate(self):
-		print "ETP Deactivate"
+		print("ETP Deactivate")
 
 	def do_update_state(self):
-		print "ETP Update"
+		print("ETP Update")
 
 	def changed_callback(self, buffer, view):
 		parser = CellParser(view)
