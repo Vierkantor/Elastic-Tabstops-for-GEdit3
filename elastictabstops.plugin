@@ -1,5 +1,5 @@
 [Plugin]
-Loader=python
+Loader=python3
 Module=elastictabstops
 IAge=3
 Name=Elastic Tabstops
